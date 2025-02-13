@@ -13,7 +13,8 @@ pub fn get_music_events() -> events::Events {
 
 #[hook]
 pub async fn raw_event(_: LavalinkClient, session_id: String, event: &serde_json::Value) {
-    if event["op"].as_str() == Some("event") || event["op"].as_str() == Some("playerUpdate") {
+    // if event["op"].as_str() == Some("event") || event["op"].as_str() == Some("playerUpdate") {
+    if event["op"].as_str() != Some("stats") {
         info!("{:?} -> {:?}", session_id, event);
     }
 }

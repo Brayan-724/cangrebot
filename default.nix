@@ -26,7 +26,7 @@ in
     # fenix: rustup replacement for reproducible builds
     toolchain = fenix.${system}.fromToolchainFile {
       file = ./rust-toolchain.toml;
-      sha256 = "sha256-Ngiz76YP4HTY75GGdH2P+APE/DEIx2R/Dn+BwwOyzZU=";
+      sha256 = "sha256-lMLAupxng4Fd9F1oDw8gx+qA0RuF7ou7xhNU8wgs0PU=";
     };
     # crane: cargo and artifacts manager
     craneLib = crane.${system}.overrideToolchain toolchain;
